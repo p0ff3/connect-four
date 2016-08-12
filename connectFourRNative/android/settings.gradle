@@ -1,0 +1,3 @@
+rootProject.name = 'connectFourRNative'
+
+include ':app'
