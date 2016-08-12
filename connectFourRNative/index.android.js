@@ -12,10 +12,18 @@ import {
   View
 } from 'react-native';
 
+const styles = require('./styles.js')
+
+const Cell = require('./components/Cell.js');
+
 class connectFourRNative extends Component {
   render() {
     return (
+
       <View style={styles.container}>
+        <Cell cellState={0}/>
+        <Cell cellState={1}/>
+        <Cell cellState={2}/>
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
@@ -30,24 +38,5 @@ class connectFourRNative extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
 
 AppRegistry.registerComponent('connectFourRNative', () => connectFourRNative);
