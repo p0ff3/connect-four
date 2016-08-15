@@ -11,31 +11,34 @@ import {
   Text,
   View
 } from 'react-native';
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
 
 const styles = require('./styles.js')
 
-const Cell = require('./components/Cell.js');
+const Game = require('./Game.js');
+const GameState = require('./reducers/GameState.js')
+
+const boardValues = new Array(7)
+for (var i = 0; i < 7; i++) {
+  boardValues[i] = new Array(7);
+  for(var j = 0; j < 7; j++){
+    boardValues[i][j] = 0
+  }
+}
+
+const store = createStore(GameState, {boardState: boardValues,
+                                      currentPlayer: 1,
+                                      hasAWinner: false})
 
 class connectFourRNative extends Component {
-  render() {
-    return (
 
-      <View style={styles.container}>
-        <Cell cellState={0}/>
-        <Cell cellState={1}/>
-        <Cell cellState={2}/>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
+  render () {
+    return (
+      <Provider store={store}>
+        <Game />
+      </Provider>
+    )
   }
 }
 

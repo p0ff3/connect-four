@@ -16,21 +16,22 @@ var styles = StyleSheet.create({
     justifyContent: 'center'
   },
   container: {
+    flexDirection:'row',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  list: {
+    flexDirection: 'row',
+    flexWrap: 'wrap'
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  item: {
+    backgroundColor: 'red',
+    margin: 3,
+    width: 100,
+    height:40
+  }
 })
 
 module.exports = styles

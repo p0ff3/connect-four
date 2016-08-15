@@ -8,8 +8,12 @@ Jag är inte helt hundra på någon front-end ännu eller Javascript så  misst�
 klient).
 - All grafik ska gå att skala och vara kompatibelt med alla typenheter plattformen stödjer. Jag har ingen mac så iOS-utveckling är inte solklart att det funkar då jag inte kan provköra.
 ##Log
-- 30 mins planning/set-up
-- 30 mins Cell.js
+- 30 mins planering/set-up
+- 1h Cell.js.
+- En stund på tåget hem över helgen på att fundera på lösningar.
+- ~3(+-2h) timmar på att lära mig/setupa redux, mest för att jag ville lära mig redux. Globalt state är ju najs.
+- 1h på logiken i redux
 
-##To-Do
-- Fixa in sizes på cells i state.
+##To-Do(Önskelista)
+- Mer test
+- Stylea upp mer
