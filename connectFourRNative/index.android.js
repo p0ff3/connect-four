@@ -14,6 +14,7 @@ import {
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 
+
 const styles = require('./styles.js')
 
 const Game = require('./Game.js');
@@ -32,6 +33,11 @@ const store = createStore(GameState, {boardState: boardValues,
                                       hasAWinner: false})
 
 class connectFourRNative extends Component {
+  componentDidMount() {
+   //Orientation.lockToPortrait(); //this will lock the view to Portrait
+   //Orientation.lockToLandscape(); //this will lock the view to Landscape
+   //Orientation.unlockAllOrientations(); //this will unlock the view to all Orientations
+ }
 
   render () {
     return (

@@ -17,13 +17,13 @@ var maxWidth = Dimensions.get('window').width; //full width
 class Cell extends Component{
   //Rendering according to state fetched from redux-store
   render() {
-    if(this.props.boardState[this.props.y][this.props.x] === 1){
+    if(this.props.boardState[this.props.x][this.props.y] === 1){
       return (
             <View style={{height: 50, width: 50, backgroundColor: 'green'}}>
               <Icon name="remove" size={(maxWidth/7-2)} color="black" />
             </View>
           );
-      } else if(this.props.boardState[this.props.y][this.props.x] === 2){
+      } else if(this.props.boardState[this.props.x][this.props.y] === 2){
         return (
               <View style={{height: 50, width: 50, backgroundColor: 'green'}}>
                 <Icon name="circle-o" size={(maxWidth/7-2)} color="black" />

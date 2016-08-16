@@ -1,3 +1,4 @@
 rootProject.name = 'connectFourRNative'
 
 include ':app'
+include ':react-native-orientation', ':app'

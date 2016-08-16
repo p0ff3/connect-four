@@ -9,11 +9,15 @@ klient).
 - All grafik ska gå att skala och vara kompatibelt med alla typenheter plattformen stödjer. Jag har ingen mac så iOS-utveckling är inte solklart att det funkar då jag inte kan provköra.
 ##Log
 - 30 mins planering/set-up
-- 1h Cell.js.
+- 1h min Cell, Board, Column etc..
 - En stund på tåget hem över helgen på att fundera på lösningar.
 - ~3(+-2h) timmar på att lära mig/setupa redux, mest för att jag ville lära mig redux. Globalt state är ju najs.
 - 1h på logiken i redux
+- 30min på att kolla upp om react-native-orientation är rimligt att fixa under omständigheterna. Blir fulfix med AndroidManifest.xml
+- 1,5h algoritm och fixning av orientation av x/y plus debuggande/testande.
 
 ##To-Do(Önskelista)
 - Mer test
 - Stylea upp mer
+- Fixa Orientation-lock(https://www.npmjs.com/package/react-native-orientation, de har problem med senaste react-native-versionen...)
+- Fixa så att cellerna har lägst index nederst och högst överst.
