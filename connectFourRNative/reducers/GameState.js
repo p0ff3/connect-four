@@ -96,7 +96,7 @@ const GameState = (state = initialState, action) => {
   switch (action.type) {
     case 'COLUMN_PRESSED':
       if(state.currentPlayer === 1){
-        nextPlayer = 1
+        nextPlayer = 2
       } else {
         nextPlayer = 1
       }
