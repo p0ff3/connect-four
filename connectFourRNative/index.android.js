@@ -30,7 +30,9 @@ for (var i = 0; i < 7; i++) {
 
 const store = createStore(GameState, {boardState: boardValues,
                                       currentPlayer: 1,
-                                      hasAWinner: false})
+                                      hasAWinner: false,
+                                      playerOneWins: 0,
+                                      playerTwoWins: 0})
 
 class connectFourRNative extends Component {
   componentDidMount() {

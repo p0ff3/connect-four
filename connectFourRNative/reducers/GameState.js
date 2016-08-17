@@ -1,8 +1,8 @@
-const boardValues = new Array(7)
+const zeroBoard = new Array(7)
 for (var i = 0; i < 7; i++) {
-  boardValues[i] = new Array(7);
+  zeroBoard[i] = new Array(7);
   for(var j = 0; j < 7; j++){
-    boardValues[i][j] = 0
+    zeroBoard[i][j] = 0
   }
 }
 /*I would give a small drawing of this algo.
@@ -82,15 +82,11 @@ const checkForWin = (tempBoard, xInput, yInput) => {
   }
 }
 
-  const initialState ={
-    currentPlayer: 1,
-    boardState: boardValues,
-    hasAWinner: false
-  }
-
-const GameState = (state = initialState, action) => {
+const GameState = (state, action) => {
   switch (action.type) {
     case 'COLUMN_PRESSED':
+      nextPlayerOneWins = state.playerOneWins
+      nextPlayerTwoWins = state.playerTwoWins
       if(state.currentPlayer === 1){
         nextPlayer = 2
       } else {
@@ -101,30 +97,40 @@ const GameState = (state = initialState, action) => {
       verticalPos = 6
       while(true){
         if(verticalPos === -1){
-          //Oneliner for returning same state. Is probably a better solution. No time.
+          //Oneliner for returning same state. There probably is a better solution. No time.
           return Object.assign({}, state, {state})
         }
         if(state.boardState[action.cords][verticalPos] === 0){
           //I don't have enough knowledge but this might be a memory-leak. I think not because state.boardState won't be referenced after this method.
-          //I don't know javacsript garbage-collector. Maybe use "let".
           tempBoard = state.boardState.slice(0);
           tempBoard[action.cords][verticalPos] = state.currentPlayer
           if(checkForWin(tempBoard, action.cords, verticalPos)){
             if(state.currentPlayer === 1){
+              nextPlayerOneWins++
               alert('Kryss vann')
             } else {
+              nextPlayerTwoWins++
               alert('Cirkel vann')
             }
-            tempBoard = boardValues;
+            tempBoard = [[0,0,0,0,0,0,0], [0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]];
           }
           return Object.assign({}, state, {
             boardState: tempBoard,
             currentPlayer: nextPlayer,
-            hasAWinner: false
+            hasAWinner: false,
+            playerTwoWins: nextPlayerTwoWins,
+            playerOneWins: nextPlayerOneWins
           })
         }
         verticalPos -= 1;
       }
+
+    case 'RESET_BOARD':
+    return Object.assign({}, state, {
+      //Någonting fungerar inte riktigt med min konstant där uppe.
+      //boardState: zeroBoard.slice(0),
+      boardState: [[0,0,0,0,0,0,0], [0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]]
+    })
 
     default:
       return state

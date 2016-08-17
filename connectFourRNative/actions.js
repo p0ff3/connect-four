@@ -12,3 +12,7 @@ export function columnPressed(cords) {
   return { type: 'COLUMN_PRESSED',
             cords: cords}
 }
+
+export function resetBoard() {
+  return { type: 'RESET_BOARD'}
+}

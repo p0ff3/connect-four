@@ -16,11 +16,13 @@ klient).
 - 30min på att kolla upp om react-native-orientation är rimligt att fixa under omständigheterna. Blir fulfix med AndroidManifest.xml
 - 1,5h algoritm och fixning av orientation av x/y plus debuggande/testande.
 - 1h Fixade bugg i algo, outlining av stats, reset av board, misc etc.
+- 2h Reset-knapp, scoreboard, Nuvarande spelare
 - Totalt:
 
 ##To-Do(Önskelista)
-- Mer test
-- Stylea upp mer
+- Mer testande
+- Stylea upp mer, bl.a. Räta till cellerna. 
 - Fixa Orientation-lock(https://www.npmjs.com/package/react-native-orientation, de har problem med senaste react-native-versionen...)
 - Fixa så att cellerna har lägst index nederst och högst överst.
 - Extrahera if-satsen så att den bara är för iconName
+- Göra komponent av scoreboarden

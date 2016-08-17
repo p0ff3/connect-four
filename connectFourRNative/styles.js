@@ -31,6 +31,17 @@ var styles = StyleSheet.create({
     margin: 3,
     width: 100,
     height:40
+  },
+  resetButton: {
+    width: 100,
+    height: 40,
+    borderWidth: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  turnShower: {
+    borderBottomWidth: 1,
+    padding: 5
   }
 })
 

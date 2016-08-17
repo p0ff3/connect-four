@@ -15,8 +15,7 @@ const styles = require('../styles.js')
 var maxWidth = Dimensions.get('window').width; //full width
 
 class Cell extends Component{
-
-  //Rendering according to state fetched from redux-store
+  //Rendering according to state fetched from redux-store, not the best fix but it works.
   render() {
     if(this.props.boardState[this.props.x][this.props.y] === 1){
       iconName = "remove"
@@ -25,7 +24,7 @@ class Cell extends Component{
       iconName = "circle-o"
       iconSize = maxWidth/7-2
     } else {
-      iconName = null
+      iconName = "circle-o"
       iconSize = 0
     }
     return (
