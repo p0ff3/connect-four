@@ -17,11 +17,16 @@ const styles = require('./styles.js')
 
 const Cell = require('./components/Cell.js');
 const Board = require('./components/Board.js');
+const Stats = require('./components/Stats.js')
 
 class Game extends Component {
   render() {
       return (
-        <Board/>
+        <View style = {{backgroundColor: 'green', flex: 1}}>
+          <Board/>
+          <Stats/>
+        </View>
+
       );
     }
 }

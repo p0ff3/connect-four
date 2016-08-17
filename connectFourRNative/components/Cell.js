@@ -15,26 +15,24 @@ const styles = require('../styles.js')
 var maxWidth = Dimensions.get('window').width; //full width
 
 class Cell extends Component{
+
   //Rendering according to state fetched from redux-store
   render() {
     if(this.props.boardState[this.props.x][this.props.y] === 1){
-      return (
-            <View style={{height: 50, width: 50, backgroundColor: 'green'}}>
-              <Icon name="remove" size={(maxWidth/7-2)} color="black" />
-            </View>
-          );
-      } else if(this.props.boardState[this.props.x][this.props.y] === 2){
-        return (
-              <View style={{height: 50, width: 50, backgroundColor: 'green'}}>
-                <Icon name="circle-o" size={(maxWidth/7-2)} color="black" />
-              </View>
-            );
-      } else {
-        return (
-              <View style={{height: 50, width: 50, backgroundColor: 'green'}}>
-              </View>
-            );
-      }
+      iconName = "remove"
+      iconSize = maxWidth/7-2
+    } else if (this.props.boardState[this.props.x][this.props.y] === 2) {
+      iconName = "circle-o"
+      iconSize = maxWidth/7-2
+    } else {
+      iconName = null
+      iconSize = 0
+    }
+    return (
+      <View style={{height: 50, width: 50, backgroundColor: 'green', justifyContent: 'center'}}>
+        <Icon name={iconName} size={iconSize} color='black' />
+      </View>
+    );
   }
 };
 

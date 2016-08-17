@@ -24,12 +24,8 @@ const checkForWin = (tempBoard, xInput, yInput) => {
   inARow = 1
   currentVal = tempBoard[xInput][y]
   //Start counting cells downwards. If outOfBounds, break the loop.
-  while(currentVal === currentPlayer){
+  while((y < 6) && tempBoard[xInput][y+1] === currentPlayer){
     y++
-    if(y > 6){
-      break;
-    }
-    currentVal = tempBoard[xInput][y]
     inARow++
   }
   if(inARow > 3){
@@ -114,7 +110,12 @@ const GameState = (state = initialState, action) => {
           tempBoard = state.boardState.slice(0);
           tempBoard[action.cords][verticalPos] = state.currentPlayer
           if(checkForWin(tempBoard, action.cords, verticalPos)){
-            alert('du vann.')
+            if(state.currentPlayer === 1){
+              alert('Kryss vann')
+            } else {
+              alert('Cirkel vann')
+            }
+            tempBoard = boardValues;
           }
           return Object.assign({}, state, {
             boardState: tempBoard,

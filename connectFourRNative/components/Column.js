@@ -21,7 +21,7 @@ class Column extends Component {
     //X-cords passes down. Cells render accordingly to redux-state
     return (
       <TouchableHighlight onPress={this._columnPress.bind(this)}>
-        <View style={{flexDirection: 'column'}}>
+        <View style={{flexDirection: 'column', borderWidth: 1}}>
           <Cell x = {this.props.x} y = {0}/>
           <Cell x = {this.props.x} y = {1}/>
           <Cell x = {this.props.x} y = {2}/>
