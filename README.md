@@ -1,4 +1,6 @@
 # connect-four
+För att köra spelet så installerar du app-debug-apk på din telefon, kan hända att utvecklarläge måste vara igång. Klicka på den kolumn du vill lägga din "bricka" i.
+
 Jag har använt React Native. Ett Javascript-ramverk till Android/iOS utvecklat av Facbook med grundtanken: "Learn once, write everywhere".
 Jag är inte helt hundra på någon front-end ännu eller Javascript så  misstänker att jag inte kommer hinna göra alla punkter på kravspecen så väntar med följande:
 - Systemet ska implementera en sk. Audit log. Användare kan identifieras på spelar namnen.
@@ -27,6 +29,7 @@ En lösning med ListViews istället för min matris skulle nog gjort allting lit
 - Totalt: ~14 h
 
 ##To-Do(Önskelista)
+- ListView/felsöka prestandaproblemet
 - Stylea upp mer, bl.a. Räta till cellerna.
 - Fixa så att cellerna har lägst index nederst och högst överst.
 - Göra komponent av scoreboarden
