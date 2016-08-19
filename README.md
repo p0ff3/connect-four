@@ -7,6 +7,11 @@ Jag är inte helt hundra på någon front-end ännu eller Javascript så  misst�
 - Spelet ska kunna hantera minst två namngivna spelare. (Alla spelare använder samma
 klient).
 - All grafik ska gå att skala och vara kompatibelt med alla typenheter plattformen stödjer. Jag har ingen mac så iOS-utveckling är inte solklart att det funkar då jag inte kan provköra.
+
+I övrigt så nu när jag provkörde på min telefon så är den slö. Misstänkt för många observers eller att det är en debug-version. Troligen det tidigare alternativet.
+En lösning med ListViews istället för min matris skulle nog gjort allting lite bättre. Jag börjar få brist på tid tyvärr.
+
+
 ##Log
 - 30 mins planering/set-up
 - 1h min Cell, Board, Column etc..
@@ -18,8 +23,8 @@ klient).
 - 1h Fixade bugg i algo, outlining av stats, reset av board, misc etc.
 - 2h Reset-knapp, scoreboard, Nuvarande spelare
 - 30 min provköra, ändra lite styles
--
-- Totalt:
+- 1.5h bygga APK, den ville inte signa den...
+- Totalt: ~14 h
 
 ##To-Do(Önskelista)
 - Stylea upp mer, bl.a. Räta till cellerna.
