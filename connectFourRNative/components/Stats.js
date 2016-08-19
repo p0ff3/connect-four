@@ -15,6 +15,7 @@ const styles = require('../styles.js')
 
 var maxWidth = Dimensions.get('window').width; //full width
 
+
 class Stats extends Component{
   _reset(){
     this.props.resetBoard()
@@ -36,19 +37,19 @@ class Stats extends Component{
               <Text style= {{fontSize: 20}}>Scoreboard </Text>
 
               <View style ={{flexDirection:'row', alignItems: 'center'}}>
-                <Icon name = "remove" size={(maxWidth/7-2)} color="black" />
+                <Icon name = "remove" size={30} color="black" />
                 <Text style = {{fontSize: 20}}>{this.props.playerOneWins}</Text>
               </View>
 
               <View style ={{flexDirection:'row', alignItems: 'center'}}>
-                <Icon name = "circle-o" size={(maxWidth/7-2)} color="black" />
+                <Icon name = "circle-o" size={30} color="black" />
                 <Text style = {{fontSize: 20}}>{this.props.playerTwoWins}</Text>
               </View>
 
             </View>
-          <View style= {{flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center', borderLeftWidth: 1}}>
+          <View style= {{flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
             <TouchableHighlight style = {styles.resetButton} onPress={this._reset.bind(this)}>
-              <Text>Nollställ</Text>
+              <Text>Nollställ bräde</Text>
             </TouchableHighlight>
           </View>
         </View>

@@ -8,7 +8,6 @@ import { connect } from 'react-redux'
 
 import { columnPressed } from '../actions.js'
 
-import styles from '../styles';
 import Cell from './Cell.js';
 
 class Column extends Component {

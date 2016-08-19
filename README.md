@@ -2,7 +2,7 @@
 Jag har använt React Native. Ett Javascript-ramverk till Android/iOS utvecklat av Facbook med grundtanken: "Learn once, write everywhere".
 Jag är inte helt hundra på någon front-end ännu eller Javascript så  misstänker att jag inte kommer hinna göra alla punkter på kravspecen så väntar med följande:
 - Systemet ska implementera en sk. Audit log. Användare kan identifieras på spelar namnen.
-- En highscore funktion som visar vilken spelare som vunnit mest matcher skall finnas.
+- En highscore funktion som visar vilken spelare som vunnit mest matcher skall finnas. (Den kom med)
 - Historiken skall lagras som sk. ”persistent data”.
 - Spelet ska kunna hantera minst två namngivna spelare. (Alla spelare använder samma
 klient).
@@ -17,12 +17,12 @@ klient).
 - 1,5h algoritm och fixning av orientation av x/y plus debuggande/testande.
 - 1h Fixade bugg i algo, outlining av stats, reset av board, misc etc.
 - 2h Reset-knapp, scoreboard, Nuvarande spelare
+- 30 min provköra, ändra lite styles
+-
 - Totalt:
 
 ##To-Do(Önskelista)
-- Mer testande
-- Stylea upp mer, bl.a. Räta till cellerna. 
-- Fixa Orientation-lock(https://www.npmjs.com/package/react-native-orientation, de har problem med senaste react-native-versionen...)
+- Stylea upp mer, bl.a. Räta till cellerna.
 - Fixa så att cellerna har lägst index nederst och högst överst.
-- Extrahera if-satsen så att den bara är för iconName
 - Göra komponent av scoreboarden
+- Ändra redux-store så scoreboard bara refreshas när det är nödvändigt

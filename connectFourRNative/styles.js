@@ -40,6 +40,7 @@ var styles = StyleSheet.create({
     alignItems: 'center'
   },
   turnShower: {
+    flex: 1,
     borderBottomWidth: 1,
     padding: 5
   }

@@ -10,7 +10,8 @@ import {
   StyleSheet,
   Text,
   ListView,
-  View
+  View,
+  Dimensions
 } from 'react-native';
 
 const styles = require('./styles.js')
@@ -19,10 +20,12 @@ const Cell = require('./components/Cell.js');
 const Board = require('./components/Board.js');
 const Stats = require('./components/Stats.js')
 
+var maxHeight = Dimensions.get('window').height; //full width
+
 class Game extends Component {
   render() {
       return (
-        <View style = {{backgroundColor: 'green', flex: 1}}>
+        <View style = {{backgroundColor: 'green', flex: 1, maxHeight: maxHeight}}>
           <Board/>
           <Stats/>
         </View>
