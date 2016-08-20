@@ -1,6 +1,8 @@
 # connect-four
 För att köra spelet så installerar du app-debug-apk på din telefon, kan hända att utvecklarläge måste vara igång. Klicka på den kolumn du vill lägga din "bricka" i.
 
+I 2.0-branschen så finns ändrignar gjorda under lördagen, DVS en dag för sent. Ta dem i aktning om ni vill :)
+
 Jag har använt React Native. Ett Javascript-ramverk till Android/iOS utvecklat av Facbook med grundtanken: "Learn once, write everywhere".
 Jag är inte helt hundra på någon front-end ännu eller Javascript så  misstänker att jag inte kommer hinna göra alla punkter på kravspecen så väntar med följande:
 - Systemet ska implementera en sk. Audit log. Användare kan identifieras på spelar namnen.
