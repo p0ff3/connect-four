@@ -15,10 +15,10 @@ var maxWidth = Dimensions.get('window').width; //full width
 class Cell extends Component{
   //Rendering according to state fetched from redux-store.
   render() {
-    if(this.props.boardState[this.props.x][this.props.y] === 1){
+    if(this.props.cellState === 1){
       iconName = "remove"
       iconSize = maxWidth/7-2
-    } else if (this.props.boardState[this.props.x][this.props.y] === 2) {
+    } else if (this.props.cellState === 2) {
       iconName = "circle-o"
       iconSize = maxWidth/7-2
     } else {
@@ -33,9 +33,9 @@ class Cell extends Component{
   }
 };
 
-const mapStateToProps = (state) =>{
+const mapStateToProps = (state, ownProps) =>{
   return {
-    boardState: state.boardState,
+    cellState: state.boardState[ownProps.x][ownProps.y],
     currentPlayer: state.currentPlayer
   }
 }
